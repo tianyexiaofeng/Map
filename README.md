@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The main function of this project is map search.
+此项目主要功能为地图搜索
 
 ## Available Scripts
 
