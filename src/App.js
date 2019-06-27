@@ -59,6 +59,7 @@ class App extends Component {
             <Header style={{ background: '#fff', padding: 0 }} />
             <Content style={{ margin: '24px 16px 0' }}>
               <Input 
+                onKeyUp={this.onKeyup.bind(this)}
                 value={this.state.inputValue}
                 onChange={this.handleInputChange.bind(this)}
                 placeholder = '查找城市、房源、租户' 
@@ -87,8 +88,13 @@ handleBtnClick(){
   var local = new BMap.LocalSearch(map, {      
     renderOptions:{map: map}      
   });      
-  local.search(this.state.inputValue);
-  
+  local.search(this.state.inputValue);  
+}
+
+onKeyup(e) {
+  if(e.keyCode === 13) {
+      this.handleBtnClick()
+  }
 }
 
 }
